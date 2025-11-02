@@ -1,5 +1,5 @@
 <?php
-include 'infosConnexionBDD.inc.php'; // inclusion du fichier de paramètres de connexion à la BDD
+include_once 'infosConnexionBDD.inc.php'; // inclusion du fichier de paramètres de connexion à la BDD
 try
         {
                 $connexion = new PDO($_ENV["dsn"], $_ENV["username"], $_ENV["password"], $_ENV["options"]);
@@ -15,4 +15,3 @@ catch(Exception $e)
 
 // Configuration de la locale pour le formatage des dates en français avec strftime dans la page calendrier.php
 setlocale(LC_TIME, 'fr_FR.UTF-8');
-?>

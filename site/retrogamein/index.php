@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="fr">
 <?php
-	include_once('BDD/driverConnexionBDD.php'); // on inclut le fichier de connexion à la base de données
-	include('routes.php');  // on inclut le fichier de routage des pages
+	include_once 'BDD/driverConnexionBDD.php'; // on inclut le fichier de connexion à la base de données
+	include_once 'routes.php';  // on inclut le fichier de routage des pages
 ?>
 
 	<head>
@@ -35,7 +35,7 @@
 			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet"> 
+			<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
 			
 			<!-- feuilles de style personnalisé en dernier pour écraser les styles par défaut de bootstrap -->
 			<link rel="stylesheet" href="template-css/style.css" media="screen" />
@@ -48,11 +48,11 @@
 		<!-- Bandeau en haut -->
 		<header class="bg-dark text-dark p-4 bandeau-container sticky-top">
 			<div class="banner">
-				<?php include('bandeau.inc.php'); /* commentez le code */?>
+				<?php include 'bandeau.inc.php'; /* commentez le code */?>
 			</div>
 			<nav class="navbar navbar-expand-lg">
 				<div class="container-fluid">
-					<?php include('menu.inc.php'); /* commentez le code */?>
+					<?php include 'menu.inc.php'; /* commentez le code */?>
 				</div>
 			</nav>
 		</header>
@@ -61,16 +61,16 @@
 
 		<div class="container">
 			<!-- Contenu principal -->
-			<section>	
-				<?php include($affiche); /* commentez le code */?>
-			</section>	
+			<section>
+				<?php include $affiche; /* commentez le code */?>
+			</section>
 			<!-- fin contenu principal -->
 		</div>
 	
 		<!-- Pied de page -->
 		<footer class="bg-dark text-light p-2 fixed-bottom" style="opacity: 0.8;">
 			<div class="d-flex flex-column flex-sm-row justify-content-between  border-top">
-				<?php include('pied_page.inc.php'); /* commentez le code */?>
+				<?php include 'pied_page.inc.php'; /* commentez le code */?>
 			</div>
 		</footer>
 		

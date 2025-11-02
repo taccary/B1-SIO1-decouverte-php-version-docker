@@ -1,4 +1,4 @@
-<?php include 'config.php'; // cette ligne permet d'inclure le fichier config.php dans cette page. Ce fichier contient la connexion à la base de données. ?> 
+<?php include 'config.php'; // cette ligne permet d'inclure le fichier config.php dans cette page. Ce fichier contient la connexion à la base de données. ?>
 
 <!DOCTYPE html>
 <html lang="fr">

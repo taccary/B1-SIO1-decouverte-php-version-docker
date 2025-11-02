@@ -1,7 +1,7 @@
 ﻿<header>
 	<h1>Redécouvrez Votre Enfance dans Notre Catalogue Rétro !</h1>
 	<h2>Bienvenue dans le catalogue de RetroGame'In, où chaque clic vous ramène à une époque révolue.</h2>
-	<p>Parcourez notre collection soigneusement sélectionnée de jeux classiques, de consoles légendaires, et d'accessoires iconiques. Que vous soyez à la recherche de trésors rétro pour compléter votre collection ou de jeux cultes à revivre, notre catalogue est un voyage dans le temps que tout amateur de rétro se doit d'explorer. 
+	<p>Parcourez notre collection soigneusement sélectionnée de jeux classiques, de consoles légendaires, et d'accessoires iconiques. Que vous soyez à la recherche de trésors rétro pour compléter votre collection ou de jeux cultes à revivre, notre catalogue est un voyage dans le temps que tout amateur de rétro se doit d'explorer.
 	<br/>
 	Plongez dans la nostalgie, dénichez des perles du passé, et redécouvrez votre enfance à travers les pixels et les saveurs du jeu vidéo d'antan. Votre quête commence ici, dans notre catalogue rétro.</p>
 </header>
@@ -51,7 +51,7 @@
 			$stmt = $connexion->prepare($SQL); // on prépare la requete
 			$stmt->bindValue(":id", $idConsole, PDO::PARAM_INT); // on transmet le numero de console à la requete
 			$stmt->execute(); // on execute la requete
-			$uneConsole = $stmt->fetch(); // on met le resultat de la requete dans un tableau 
+			$uneConsole = $stmt->fetch(); // on met le resultat de la requete dans un tableau
 			$stmt->closeCursor(); // on ferme le curseur des résultats
 
 			/* deuxième requete pour récupérer la liste des jeux de la console */
@@ -68,7 +68,7 @@
 			/* affichage du titre de la console et du nombre de jeux */
 
 			$nbJeux = "pas de jeux" ; // on initialise la variable $nbJeux
-			if (count($lesJeux) != 0){ 
+			if (count($lesJeux) != 0){
 				if (count($lesJeux) == 1){
 					$nbJeux = "1 jeu"; // on écrase la variable $nbJeux avec le nombre de jeux concaténé avec le mot "jeu"
 				} else {

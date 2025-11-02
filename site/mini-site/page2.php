@@ -1,4 +1,4 @@
-<?php include 'config.php'; // cette ligne permet d'inclure le fichier config.php dans cette page. Ce fichier contient la connexion à la base de données. ?> 
+<?php include 'config.php'; // cette ligne permet d'inclure le fichier config.php dans cette page. Ce fichier contient la connexion à la base de données. ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,7 +34,7 @@
             $query = $connexion->prepare($requete);
             $query->execute();
             $lesMembres = $query->fetchAll(PDO::FETCH_ASSOC);
-        ?> 
+        ?>
         <!-- liste des membres sous forme de liste déroulante -->
         <form method="post" action="page2.php">
             <label for="membre">Membre :</label>

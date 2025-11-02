@@ -78,7 +78,7 @@
                         <tr>
                             <td class="code-column"><code>}</code></td>
                             <td>Cette ligne marque la fin de la boucle foreach.</td>
-                        </tr>                
+                        </tr>
                     </tbody>
                 </table>
             </div>

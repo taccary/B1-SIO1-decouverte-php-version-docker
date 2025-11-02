@@ -17,7 +17,7 @@
         <h5 class="card-title">Monkey Island - des souris et du rhum</h5>
 		<p class="card-text"><small class="text-muted"><strong> Jeux indés - Homebrew - Néo Rétro</strong> <time>Jeudi 15 octobre 2020</time></small></p>
         <p class="card-text">
-			A l'occasion du trentième anniversaire de notre vieil ami Guybrush Threepwood, une foultitude de jeux et de vidéos ont fleuri sur le web. Armé de notre seule souris - et d'une bouteille de rhum - découvrons ensemble ces initiatives enthousiasmantes. (...) 
+			A l'occasion du trentième anniversaire de notre vieil ami Guybrush Threepwood, une foultitude de jeux et de vidéos ont fleuri sur le web. Armé de notre seule souris - et d'une bouteille de rhum - découvrons ensemble ces initiatives enthousiasmantes. (...)
 		</p>
 		<a href="https://www.rom-game.fr/news/4204-Monkey+Island+-+des+souris+et+du+rhum.html" target="_blank" class="btn btn-primary">En savoir plus...</a>
       </div>
@@ -28,14 +28,14 @@
 <div class="card mb-3 article" >
   <div class="row no-gutters">
     <div class="col-md-4">
-	  <img src="https://www.rom-game.fr/multimedia/newsM8/201013_dinocrisisrebirth.jpg" class="card-img"  alt="Dino Crisis Rebirth - le ravalement de façade est disponible !"> 
+	  <img src="https://www.rom-game.fr/multimedia/newsM8/201013_dinocrisisrebirth.jpg" class="card-img"  alt="Dino Crisis Rebirth - le ravalement de façade est disponible !">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Dino Crisis Rebirth - le ravalement de façade est disponible !</h5>
 		<p class="card-text"><small class="text-muted"><strong> Emulateurs, mods & hacks</strong> <time>Mardi 13 octobre 2020</time></small></p>
         <p class="card-text">
-		Dino Crisis Rebirth est un patch indispensable pour tous les fans de Dino Crisis. Bonne nouvelle, il est désormais disponible en téléchargement gratuit pour remasteriser le jeu avec un nouveau pack de textures ! (...) 
+		Dino Crisis Rebirth est un patch indispensable pour tous les fans de Dino Crisis. Bonne nouvelle, il est désormais disponible en téléchargement gratuit pour remasteriser le jeu avec un nouveau pack de textures ! (...)
 		</p>
 		<a href="https://www.rom-game.fr/news/4201-Dino+Crisis+Rebirth.html" target="_blank" class="btn btn-primary">En savoir plus...</a>
       </div>
@@ -46,7 +46,7 @@
 <div class="card mb-3 article" >
   <div class="row no-gutters">
     <div class="col-md-4">
-	  <img src="https://www.rom-game.fr/multimedia/newsM8/201013_corsairtrainer.jpg" class="card-img"  alt="Corsair, un nouveau shmup approche de votre Amstrad CPC"> 
+	  <img src="https://www.rom-game.fr/multimedia/newsM8/201013_corsairtrainer.jpg" class="card-img"  alt="Corsair, un nouveau shmup approche de votre Amstrad CPC">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -64,7 +64,7 @@
 <div class="card mb-3 article" >
   <div class="row no-gutters">
     <div class="col-md-4">
-	  <img src="https://www.rom-game.fr/multimedia/newsM8/201012_amigamini.jpg" class="card-img"  alt="Retrogames tease ce qui semble être un Amiga Mini !"> 
+	  <img src="https://www.rom-game.fr/multimedia/newsM8/201012_amigamini.jpg" class="card-img"  alt="Retrogames tease ce qui semble être un Amiga Mini !">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -82,7 +82,7 @@
 <div class="card mb-3 article" >
   <div class="row no-gutters">
     <div class="col-md-4">
-	  <img src="https://www.rom-game.fr/multimedia/newsM8/201012_MesenhdpackZelda.jpg" class="card-img"  alt="Mesen HD Pack remasterise The Legend of Zelda comme jamais !"> 
+	  <img src="https://www.rom-game.fr/multimedia/newsM8/201012_MesenhdpackZelda.jpg" class="card-img"  alt="Mesen HD Pack remasterise The Legend of Zelda comme jamais !">
     </div>
     <div class="col-md-8">
       <div class="card-body">

@@ -45,13 +45,13 @@
                 <p>Le tableau PHP résultat <code>$lesMembres</code> de la requête à la base de données est le suivant :</p>
 
                 <?php
-                    echo "<pre>";
-                    var_dump($lesMembres);
-                    echo "</pre>";
+                echo "<pre>";
+                var_dump($lesMembres);
+                echo "</pre>";
                 ?>
 
                 <p>Ensuite, on utilise ce tableau pour créer la liste déroulante qui servira à filtrer les avis par membre :<br>
-                Cette liste est un formulaire HTML avec une liste déroulante (<code>&lt;select></code>) qui contient une option par membre. Chaque option a une valeur égale à l'identifiant du membre et un texte égal au nom du membre :</p>
+                    Cette liste est un formulaire HTML avec une liste déroulante (<code>&lt;select></code>) qui contient une option par membre. Chaque option a une valeur égale à l'identifiant du membre et un texte égal au nom du membre :</p>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -78,14 +78,13 @@
                         </tr>
                         <tr>
                             <td class="code-column"><code>&lt;button type="submit"&gt;Afficher les avis du membre&lt;/button&gt;</code></td>
-                            <td>Cette ligne crée un bouton de soumission qui 
-                            déclanchera l'envoi du formulaire. Lorsque l'utilisateur clique sur le bouton, les données du formulaire sont envoyées en POST à la page "page2.php".</td>
+                            <td>Cette ligne crée un bouton de soumission qui déclenchera l'envoi du formulaire. Lorsque l'utilisateur clique sur le bouton, les données du formulaire sont envoyées en POST à la page "page2.php".</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <p>
-                    Le code qui suit est un traitement conditionnel qui récupère les avis des membres sélectionnés dans la liste déroulante. Si un membre est sélectionné, on récupère les avis de ce membre. Sinon, on récupère tous les avis. 
+                    Le code qui suit est un traitement conditionnel qui récupère les avis des membres sélectionnés dans la liste déroulante. Si un membre est sélectionné, on récupère les avis de ce membre. Sinon, on récupère tous les avis.
                 </p>
 
                 <table class="table table-bordered">
@@ -156,9 +155,9 @@
 
                 <p>Le tableau PHP résultat <code>$lesAvis</code> de la requête à la base de données est le suivant. C'est un tableau de <?= count($lesAvis) ?> cases, contenant chacune un tableau de <?= count($lesAvis[0]) ?> cases correspondants aux différents champs renvoyés par le * de la requete SQL :</p>
                 <?php
-                    echo "<pre>";
-                    var_dump($lesAvis);
-                    echo "</pre>";
+                echo "<pre>";
+                var_dump($lesAvis);
+                echo "</pre>";
                 ?>
 
                 <p>Enfin, le serveur parcours le tableau PHP ainsi fabriqué <code>$lesAvis</code> et génére un affichage des avis du membre sélectionnés ou de tous les membres (selon le cas du if dans lequel il est passé) sous forme d'une liste à puce :</p>
@@ -174,17 +173,17 @@
                         <tr>
                             <td class="code-column"><code>&lt;?php <br>foreach ($lesAvis as $unAvis) <br> ?&gt;{</code></td>
                             <td>Ce code ouvre une boucle foreach qui parcoure le tableau $lesAvis et pour chaque avis, le stocke dans la variable $unAvis. <br>
-                            Cette variable est un tableau associatif de <?= count($lesAvis[0]) ?> cases contenant les informations issues de la jointure des 3 tables avis, membre et jeu (commentaire, date, nom, prixMoyen, ...).<br>Le code php est ensuite fermé par la balise de fermeture ?&gt; pour repasser en mode HTML.
-                        </td>
-                        </td>
+                                Cette variable est un tableau associatif de <?= count($lesAvis[0]) ?> cases contenant les informations issues de la jointure des 3 tables avis, membre et jeu (commentaire, date, nom, prixMoyen, ...).<br>Le code php est ensuite fermé par la balise de fermeture ?&gt; pour repasser en mode HTML.
+                            </td>
+                            </td>
                         </tr>
                         <tr>
                             <td class="code-column"><code>&lt;li><br>
-                            &lt;strong><mark>&lt;?= $unAvis['nom'] ?></mark>&lt;/strong> : <mark>&lt;?= $unAvis['commentaire']; ?></mark> (<mark>&lt;?= $unAvis['date'] ?> ?></mark>)<br>
-                            &lt;/li></code></td>
+                                    &lt;strong><mark>&lt;?= $unAvis['nom'] ?></mark>&lt;/strong> : <mark>&lt;?= $unAvis['commentaire']; ?></mark> (<mark>&lt;?= $unAvis['date'] ?> ?></mark>)<br>
+                                    &lt;/li></code></td>
                             <td>Ces 3 lignes de code affichent les informations de chaque avis. La première et la dernière ligne servent à créer un élément de liste à puce.<br> La ligne intermédiaire affiche le nom du jeu, le commentaire de l'avis et la date de l'avis (mise en forme avec des parenthèses).<br>
-                            Cette partie utilise une syntaxe raccourcie pour afficher les valeurs des variables PHP dans le code HTML. Les balises <code>&lt;?=</code> sont équivalentes à <code>&lt;?php echo</code>.<br> Ce code est un mélange de HTML et de PHP (en <mark>surlignage</mark> ici).
-                        </td>
+                                Cette partie utilise une syntaxe raccourcie pour afficher les valeurs des variables PHP dans le code HTML. Les balises <code>&lt;?=</code> sont équivalentes à <code>&lt;?php echo</code>.<br> Ce code est un mélange de HTML et de PHP (en <mark>surlignage</mark> ici).
+                            </td>
                         </tr>
                         <tr>
                             <td class="code-column"><code>&lt;?php<br>}<br>&lt;?></code></td>
