@@ -4,11 +4,12 @@ services:
         context: .
         dockerfile: Dockerfile
     container_name: SWEB-apache-php8.3
-    restart: unless-stopped
     extra_hosts:
         - "host.docker.internal:host-gateway"
     volumes:
         - ./site:/var/www/html #mettre dans site les fichiers web du projet
+        - ./config/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
+        - ./config/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     ports:
         - 8000:80
     depends_on:
