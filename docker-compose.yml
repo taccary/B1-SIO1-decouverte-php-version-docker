@@ -11,15 +11,8 @@ services:
         - ./site:/var/www/html #mettre dans site les fichiers web du projet
     ports:
         - 8000:80
-        - 9003:9003            # port Xdebug (optionnel si host.docker.internal fonctionne)
     depends_on:
         - mysql
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
-      interval: 15s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
   mysql:
     image: mysql:latest
     container_name: SBDD-mysql
@@ -40,7 +33,7 @@ services:
     container_name: Sweb-phpmyadmin
     environment:
                 PMA_HOST: mysql
-        PMA_PORT: 3306
+                PMA_PORT: 3306
     ports:
         - '8080:80'
     depends_on:

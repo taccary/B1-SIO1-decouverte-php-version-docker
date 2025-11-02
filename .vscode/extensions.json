@@ -12,9 +12,10 @@
 		"SonarSource.sonarlint-vscode",
 		"cweijan.vscode-mysql-client2",
 		"donjayamanne.githistory",
+		"xdebug.php-debug" // Extension for PHP debugging with XDebug
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
-		
+		"Github.copilot"
 	]
 }
