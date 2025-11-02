@@ -1,6 +1,6 @@
 # Sites de découverte du PHP en BTS SIO1
 site dynamique d'exemple utilisé en SIO1-B1-web (retrogame'in) et site d'entrainement au PHP
-> **Note :** Dernière MAJ 10/2024 (version simplifiée)
+> **Note :** Dernière MAJ 10/2025 (version simplifiée)
 
 ## Configuration du site sur un serveur
 Ce projet nécessite les éléments suivants :
@@ -60,6 +60,6 @@ Pour faciliter le développement et la maintenance de ce projet, nous recommando
 - **PHP DocBlocker** (`neilbrayfield.php-docblocker`) : Aide à générer des blocs de documentation PHPDoc pour vos fonctions et classes.
 - **SonarLint** (`SonarSource.sonarlint-vscode`) : Analyse statique du code pour détecter les erreurs et les mauvaises pratiques.
 - **Git History** (`donjayamanne.githistory`) : Permet de visualiser et de naviguer dans l'historique des commits Git.
-- **PHP Debug** (xdebug.php-debug) : 
+- **PHP Debug** (`xdebug.php-debug`) : Extension alternative de débogage PHP utilisant Xdebug pour le débogage pas à pas et l'analyse de performance.
 
 Pour installer les extensions recommandées, allez dans le menu "Extensions" de VSCode, tapez `@recommended` dans la barre de recherche, et cliquez sur le symbole de téléchargement (nuage avec flèche) à côté des extensions listées. Ces outils vous aideront à écrire du code plus efficacement, à déboguer plus facilement, et à gérer vos conteneurs Docker directement depuis l'éditeur.
