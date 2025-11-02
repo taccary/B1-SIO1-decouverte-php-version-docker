@@ -1,0 +1,16 @@
+# Ignore database data and large files that shouldn't be sent in build context
+database/db_data
+database/mysql
+database/ib_*
+database/innodb_temp
+database/innodb_redo
+# Editor / IDE
+.vscode
+.git
+# Node / vendor
+node_modules
+vendor
+# OS
+.DS_Store
+# Logs
+*.log

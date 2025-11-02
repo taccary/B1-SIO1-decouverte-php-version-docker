@@ -1,23 +1,32 @@
 services:
-  php-apache-environment:
-    container_name: SWEB-apache-php8.1
+  apache:
     build:
         context: .
         dockerfile: Dockerfile
-    depends_on:
-        - db
+    container_name: SWEB-apache-php8.3
+    restart: unless-stopped
+    extra_hosts:
+        - "host.docker.internal:host-gateway"
     volumes:
         - ./site:/var/www/html #mettre dans site les fichiers web du projet
     ports:
         - 8000:80
-  
-  db:
-    container_name: SBDD-mysql
+        - 9003:9003            # port Xdebug (optionnel si host.docker.internal fonctionne)
+    depends_on:
+        - mysql
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+  mysql:
     image: mysql:latest
+    container_name: SBDD-mysql
     environment: #infos d'initialisation de la BDD
         MYSQL_ROOT_PASSWORD: root
         MYSQL_USER: admin
-        MYSQL_PASSWORD: mdp
+        MYSQL_PASSWORD: mdp@dm1nTPphp
         MYSQL_TCP_PORT: 3306
     volumes:
         - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql # changer le script init.sql présent dans le dossier database pour donner les droits admin à l'utilisateur user
@@ -28,10 +37,11 @@ services:
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: Sweb-phpmyadmin
+    environment:
+                PMA_HOST: mysql
+        PMA_PORT: 3306
     ports:
         - '8080:80'
-    environment:
-        PMA_HOST: SBDD-mysql
-        PMA_PORT: 3306
     depends_on:
-        - db
+        - mysql
