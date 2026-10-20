@@ -1,0 +1,13 @@
+{
+  "name": "SIO1 - PHP / MySQL / phpMyAdmin",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-azuretools.vscode-docker"]
+    }
+  },
+  // Sans ce réglage, le trafic entre conteneurs du réseau compose est bloqué dans le codespace
+  // (Apache/phpMyAdmin ne peuvent pas joindre MySQL : "Connection timed out").
+  // Exécuté à chaque démarrage du codespace, puis lancement des conteneurs.
+  "postStartCommand": "sudo sysctl -w net.bridge.bridge-nf-call-iptables=0 net.bridge.bridge-nf-call-ip6tables=0 || true; docker compose up -d"
+}

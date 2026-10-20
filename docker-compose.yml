@@ -27,7 +27,8 @@ services:
         MYSQL_USER: admin
         MYSQL_PASSWORD: mdp@dm1nTPphp
     volumes:
-        - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+        - ./database/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+        - ./database/retrogamein.sql:/docker-entrypoint-initdb.d/02-retrogamein.sql
         - ./database/db_data:/var/lib/mysql
     ports:
         - "3306:3306"
