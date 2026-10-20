@@ -4,38 +4,49 @@ services:
         context: .
         dockerfile: Dockerfile
     container_name: SWEB-apache-php8.3
+    networks:
+      - app-network
     extra_hosts:
         - "host.docker.internal:host-gateway"
     volumes:
-        - ./site:/var/www/html #mettre dans site les fichiers web du projet
+        - ./site:/var/www/html
         - ./config/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
         - ./config/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     ports:
         - 8000:80
     depends_on:
         - mysql
+        
   mysql:
     image: mysql:latest
     container_name: SBDD-mysql
-    environment: #infos d'initialisation de la BDD
+    networks:
+      - app-network
+    environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_USER: admin
         MYSQL_PASSWORD: mdp@dm1nTPphp
-        MYSQL_TCP_PORT: 3306
     volumes:
-        - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql # changer le script init.sql présent dans le dossier database pour donner les droits admin à l'utilisateur user
-        - ./database:/docker-entrypoint-initdb.d # mettre dans le dossier database le script .sql pour initialiser la bdd métier
-        - ./database/db_data:/var/lib/mysql # mettre dans le dossier database/db_data les fichiers de la BDD pour garder les évolutions
+        - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+        - ./database/db_data:/var/lib/mysql
     ports:
         - "3306:3306"
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: Sweb-phpmyadmin
+    networks:
+      - app-network
     environment:
         PMA_HOST: mysql
         PMA_PORT: 3306
+        PMA_USER: admin
+        PMA_PASSWORD: mdp@dm1nTPphp
     ports:
         - '8080:80'
     depends_on:
         - mysql
+
+networks:
+  app-network:
+    driver: bridge
