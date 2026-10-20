@@ -3,7 +3,8 @@
     // https://code.visualstudio.com/docs/editor/debugging
     // https://xdebug.org/docs/step_debug
     "version": "0.2.0",
-    "configurations": [        {
+    "configurations": [
+        {
             "name": "🚫 Launch without XDebug",
             "type": "php",
             "request": "launch",
@@ -18,9 +19,6 @@
             "type": "php",
             "request": "launch",
             "port": 9003,
-            "pathMappings": {
-                "/var/www/html": "${workspaceFolder}/site"
-            },
             "xdebugSettings": {
                 "max_children": 100,
                 "max_data": 1024,
